@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="ECF sur la conception">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <title>Forum simple</title>
+    <link type="text/css" rel="stylesheet" href="../css/normalize.css">
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="../favicon.ico" />
+    <!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><![endif]-->
+  </head>
+  <body id="reponsetName">
+    <div>
+      <a href="./SujetPage.html">Créer un nouveau sujet</a>
+    </div>
+    <section class="container" >
+        <div class='cadre'>
+          <h2>Sujet : </h2>
+          <div class="cadre">
+            <p>Surnom :,  langage : </p>
+            <div class="cadre">
+              <h3>Description : </h3>
+              <div class="cadre">
+                <h4>Code :</h4>
+                <div class="cadre">
+                  <p>code ...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cadre">
+            <h2>Créer post</h2>
+            <div>
+              <form id="reponse" name="reponse" >
+                <div>
+                  <label for="sujetId">Entrer 1</label>
+                  <input type="text" id="sujetId" name="sujetId" value="1">
+              </div>
+              <div>
+                  <label for="nickname">Surnom :</label>
+                  <input type="text" id="nickname" name="nickname">
+              </div>
+              <div>
+                  <label for="description">Description :</label>
+                  <input type="text" id="description" name="description">
+              </div>
+              <div>
+                  <label for="code">Code :</label>
+                  <textarea id="code" name="code"></textarea>
+              </div>
+              <input type="button" id="submitForm" value="send">
+          </form>
+            </div>
+            <h2>Réponce(s)</h2>
+            <div class="cadre" id="reponsePosted">
+
+            </div>
+          </div>
+
+        </div>
+    </section>    
+        
+    <footer></footer> 
+     
+    <script src="../js/functions.js"></script>
+    <script src="../js/reponsePage.js"></script>
+  </body>
+</html>

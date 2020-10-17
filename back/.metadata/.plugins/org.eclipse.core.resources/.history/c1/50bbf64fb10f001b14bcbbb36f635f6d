@@ -1,0 +1,25 @@
+package fr.formation.forum.dtos;
+
+import java.util.List;
+
+import javax.validation.constraints.NotEmpty;
+
+public class SujetDto {
+private String titre;
+@NotEmpty
+	private String nickname;
+		
+@NotEmpty
+	private String language;
+	
+@NotEmpty
+	private String description;
+	
+@NotEmpty
+	private String code;
+	
+    private ForumDto forum;
+	
+    private List<ReponseCreateDto> reponses;
+
+}

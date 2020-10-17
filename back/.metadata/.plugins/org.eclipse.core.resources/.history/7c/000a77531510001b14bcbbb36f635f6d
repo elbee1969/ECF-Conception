@@ -1,0 +1,14 @@
+package fr.formation.forum.services;
+
+import javax.validation.Valid;
+
+import fr.formation.forum.dtos.SujetCreateDto;
+import fr.formation.forum.dtos.SujetDto;
+
+public interface SujetService {
+
+	void create(@Valid SujetCreateDto dto);
+
+	SujetDto get(Long id);
+
+}

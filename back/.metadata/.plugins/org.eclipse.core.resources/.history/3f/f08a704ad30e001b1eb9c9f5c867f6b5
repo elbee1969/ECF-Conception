@@ -1,0 +1,15 @@
+package fr.formation.forum.services;
+
+import javax.validation.Valid;
+
+import fr.formation.forum.controllers.List;
+import fr.formation.forum.dtos.ReponcesDto;
+import fr.formation.forum.dtos.ReponseCreateDto;
+
+public interface ReponceService {
+
+	void create(@Valid ReponseCreateDto dto);
+
+	List<ReponcesDto> getAll();
+
+}

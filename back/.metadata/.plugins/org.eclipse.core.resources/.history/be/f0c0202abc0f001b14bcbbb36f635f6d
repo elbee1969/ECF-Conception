@@ -1,0 +1,25 @@
+package fr.formation.forum.services;
+
+import javax.validation.Valid;
+
+import org.springframework.stereotype.Service;
+
+import fr.formation.forum.dtos.ForumCreateDto;
+import fr.formation.forum.dtos.ForumDto;
+
+@Service
+public class ForumServiceImpl implements ForumService {
+
+	@Override
+	public void create(@Valid ForumCreateDto dto) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public ForumDto get(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,49 @@
+package fr.formation.forum.services;
+
+import javax.validation.Valid;
+
+import org.springframework.stereotype.Service;
+
+import fr.formation.forum.dtos.SujetCreateDto;
+import fr.formation.forum.dtos.SujetViewDto;
+import fr.formation.forum.entities.Forum;
+import fr.formation.forum.entities.Sujet;
+import fr.formation.forum.repositories.ForumRepository;
+import fr.formation.forum.repositories.SujetRepository;
+
+@Service
+public class SujetServiceImpl implements SujetService {
+
+private final SujetRepository SujetRepo;
+private final ForumRepository ForumRepo;
+
+	protected SujetServiceImpl(SujetRepository SujetRepo, ForumRepository ForumRepo) {
+		this.SujetRepo = SujetRepo;
+		this.ForumRepo = ForumRepo;
+	}
+	@Override
+	public void create(@Valid SujetCreateDto dto) {
+		// TODO Auto-generated method stub
+		Sujet sujet = new Sujet();
+		populateAndSave(dto, sujet);
+
+	}
+
+	private void populateAndSave(@Valid SujetCreateDto dto, Sujet sujet) {
+		// TODO Auto-generated method stub
+		sujet.setTitle(dto.getTitle());
+		sujet.setNickname(dto.getNickname());
+		sujet.setLanguage(dto.getLanguage());
+		sujet.setDescription(dto.getDescription());
+		sujet.setCode(dto.getCode());
+		sujet.setForum(dto.getForum());
+		repo.save(sujet);
+	}
+
+	@Override
+	public SujetViewDto getOne(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=forum/C:\/Users\/utilisateur\/.m2\/repository\/org\/springframework\/spring-webmvc\/5.2.9.RELEASE\/spring-webmvc-5.2.9.RELEASE.jar&lt;org.springframework.web.servlet.config.annotation(WebMvcConfigurerAdapter.class[WebMvcConfigurerAdapter" modifiers="1049633" timestamp="1602754108246"/>
+    <typeInfo handle="=forum/src\/main\/java&lt;fr.formation.forum.services{ForumService.java[ForumService" modifiers="513" timestamp="1602758536868"/>
+    <typeInfo handle="=forum/src\/main\/java&lt;fr.formation.forum.services{SujetService.java[SujetService" modifiers="513" timestamp="1602758545051"/>
+    <typeInfo handle="=forum/C:\/Users\/utilisateur\/.m2\/repository\/org\/springframework\/data\/spring-data-jpa\/2.3.4.RELEASE\/spring-data-jpa-2.3.4.RELEASE.jar&lt;org.springframework.data.jpa.repository(JpaRepository.class[JpaRepository" modifiers="1537" timestamp="1602754099746"/>
+</typeInfoHistroy>

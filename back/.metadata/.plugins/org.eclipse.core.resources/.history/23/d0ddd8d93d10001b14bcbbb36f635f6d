@@ -1,0 +1,72 @@
+package fr.formation.forum.dtos;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+
+public class ReponseCreateDto {
+	
+	@Size(min = 1, max = 45)
+	@NotBlank
+	private String nickname;
+	
+	@Size(min = 1, max = 255)
+	@NotBlank
+	private String description;
+	
+	@Size(min = 1, max = 255)
+	@NotBlank
+	private String code;	
+	
+	@NotEmpty
+    private SujetDto sujet;
+
+	public ReponseCreateDto() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public ReponseCreateDto(@Size(min = 1, max = 45) @NotBlank String nickname,
+			@Size(min = 1, max = 255) @NotBlank String description, @Size(min = 1, max = 255) @NotBlank String code,
+			@NotEmpty SujetDto sujet) {
+		super();
+		this.nickname = nickname;
+		this.description = description;
+		this.code = code;
+		this.sujet = sujet;
+	}
+
+	public String getNickname() {
+		return nickname;
+	}
+
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+
+	public SujetDto getSujet() {
+		return sujet;
+	}
+
+	public void setSujet(SujetDto sujet) {
+		this.sujet = sujet;
+	}
+
+	
+}

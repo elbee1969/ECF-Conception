@@ -1,0 +1,24 @@
+package fr.formation.forum.dtos;
+
+import javax.persistence.Column;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotEmpty;
+
+import fr.formation.forum.entities.Sujet;
+
+public class ReponseDto {
+	
+private String nickname;
+	
+	@NotEmpty
+	private String description;
+	
+	@NotEmpty
+	private String code;	
+	
+	
+	@NotEmpty
+    private SujetDto sujet;
+
+}

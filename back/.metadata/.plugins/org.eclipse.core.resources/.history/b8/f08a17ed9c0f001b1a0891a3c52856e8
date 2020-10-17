@@ -1,0 +1,17 @@
+package fr.formation.forum.entities;
+
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "reponse")
+public class Reponse {
+	
+	
+	@ManyToOne(optional = true)
+    @JoinColumn(name = "sujet_id")
+    private Sujet sujet;
+
+}

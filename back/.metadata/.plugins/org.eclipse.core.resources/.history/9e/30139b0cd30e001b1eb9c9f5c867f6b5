@@ -1,0 +1,5 @@
+package fr.formation.forum.services;
+
+public interface SujetService {
+
+}

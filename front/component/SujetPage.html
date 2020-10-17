@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="ECF sur la conception">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <title>Forum simple</title>
+    <link type="text/css" rel="stylesheet" href="../css/normalize.css">
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="favicon.ico" />
+    <!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><![endif]-->
+  </head>
+  <body id="sujetName">
+    <section class="container" >
+        <form id="sujet" name="sujet" >
+            <div>
+                <label for="forumId">Entrer 1</label>
+                <input type="text" id="forumId" name="forumId" value="1">
+            </div>
+            <div>
+                <label for="title">Titre du sujet</label>
+                <input type="text" id="title" name="title">
+            </div>
+            <div>
+                <label for="nickname">Surnom :</label>
+                <input type="text" id="nickname" name="nickname">
+            </div>
+            <div>
+                <label for="language">Langage</label>
+                <input type="text" id="language" name="language">
+            </div>
+            <div>
+                <label for="subject">Sujet :</label>
+                <textarea id="subject" name="subject"></textarea>
+            </div>
+            <div>
+                <label for="description">Description :</label>
+                <textarea id="description" name="description"></textarea>
+            </div>
+            <div>
+                <label for="code">Code :</label>
+                <textarea id="code" name="code"></textarea>
+            </div>
+            <input type="button" id="submitForm" value="send">
+        </form>
+    </section>
+    <section class="container">
+    </section>  
+    <footer></footer>  
+
+    <script src="../js/functions.js"></script>
+    <script src="../js/sujetPage.js"></script>
+  </body>
+</html>

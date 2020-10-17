@@ -1,0 +1,10 @@
+package fr.formation.forum.dtos;
+
+public interface ReponseViewDto {
+
+	String getNickname();
+	
+	String getDescription();
+	
+	String getCode();
+}

@@ -1,0 +1,44 @@
+package fr.formation.forum.dtos;
+
+import java.util.List;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
+public class ForumCreateDto {
+	
+	@Size(min = 1, max = 45)
+	@NotBlank
+	private String name;
+	  
+	private List<SujetCreateDto> sujets;
+
+	public ForumCreateDto(String name, List<SujetCreateDto> sujets) {
+		super();
+		this.name = name;
+		this.sujets = sujets;
+	}
+
+	public ForumCreateDto() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public List<SujetCreateDto> getSujets() {
+		return sujets;
+	}
+
+	public void setSujets(List<SujetCreateDto> sujets) {
+		this.sujets = sujets;
+	}
+
+
+}

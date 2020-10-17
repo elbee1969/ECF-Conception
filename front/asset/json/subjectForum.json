@@ -1,0 +1,10 @@
+[
+    {
+        "surnom": "lolo",
+        "date": "10/10/2020",
+        "langage": "JS",
+        "sujet": "les promesses",
+        "description": "Comment faire une promesse",
+        "code": "faireQqc().then(successCallback, failureCallback);"
+    }
+]

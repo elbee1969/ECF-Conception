@@ -1,0 +1,15 @@
+package fr.formation.forum.dtos;
+
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.OneToMany;
+
+import fr.formation.forum.entities.Sujet;
+
+public class ForumDto {
+
+	private String name;
+	  
+		    private List<Sujet> sujets;
+}

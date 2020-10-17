@@ -1,0 +1,47 @@
+package fr.formation.forum.services;
+
+import javax.validation.Valid;
+
+import org.springframework.stereotype.Service;
+
+import fr.formation.forum.dtos.ForumCreateDto;
+import fr.formation.forum.dtos.ForumDto;
+import fr.formation.forum.dtos.ForumViewDto;
+import fr.formation.forum.entities.Forum;
+import fr.formation.forum.repositories.ForumRepository;
+
+@Service
+public class ForumServiceImpl implements ForumService {
+	
+
+	private final ForumRepository repo;
+	
+	protected ForumServiceImpl(ForumRepository repo) {
+		this.repo = repo;
+	}
+
+
+	@Override
+	public void create(@Valid ForumCreateDto dto) {
+		// TODO Auto-generated method stub
+		Forum forum = new Forum();
+		populateAndSave(dto, forum);
+
+	}
+
+	private void populateAndSave(@Valid ForumCreateDto dto, Forum forum) {
+		// TODO Auto-generated method stub
+		forum.setName(dto.getName());
+		repo.save(forum);
+
+	}
+
+
+
+	@Override
+	public ForumViewDto getOne(Long id) {
+		// TODO Auto-generated method stub
+		return repo.getById(id);
+	}
+
+}

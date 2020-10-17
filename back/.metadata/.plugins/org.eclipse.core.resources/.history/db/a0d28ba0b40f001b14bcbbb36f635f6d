@@ -1,0 +1,24 @@
+package fr.formation.forum.dtos;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+
+public class ReponseCreateDto {
+	
+	@Size(min = 1, max = 45)
+	@NotBlank
+	private String nickname;
+	
+	@Size(min = 1, max = 255)
+	@NotBlank
+	private String description;
+	
+	@Size(min = 1, max = 255)
+	@NotBlank
+	private String code;	
+	
+	@NotEmpty
+    private SujetDto sujet;
+
+}

@@ -1,0 +1,60 @@
+package fr.formation.forum.controllers;
+import java.util.List;
+
+import javax.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import fr.formation.forum.dtos.ForumCreateDto;
+import fr.formation.forum.dtos.ForumDto;
+import fr.formation.forum.dtos.ReponcesDto;
+import fr.formation.forum.dtos.ReponseCreateDto;
+import fr.formation.forum.dtos.SujetCreateDto;
+import fr.formation.forum.dtos.SujetDto;
+import fr.formation.forum.services.ForumService;
+import fr.formation.forum.services.ReponceService;
+import fr.formation.forum.services.SujetService;
+
+@RestController
+public class ForumController {
+	
+	private final ForumService forumService;
+	private final SujetService sujetService;
+	private final ReponceService reponceService;
+	
+	public ForumController(ForumService forumService, SujetService sujetService, ReponceService reponceService) {
+		this.forumService = forumService;
+		this.sujetService = sujetService;
+		this.reponceService = reponceService;
+	}
+	
+	@PostMapping // POST "/api/forum" avec un JSON dans le corps de la requête
+	public void create(@RequestBody @Valid ForumCreateDto dto) {
+		forumService.create(dto);
+	}
+	@PostMapping("/sujet") // POST "/api/forum/sujet" avec un JSON dans le corps de la requête
+	public void create(@RequestBody @Valid SujetCreateDto dto) {
+		sujetService.create(dto);
+	}
+	@PostMapping("/reponce") // POST "/api/forum/reponce" avec un JSON dans le corps de la requête
+	public void create(@RequestBody @Valid ReponseCreateDto dto) {
+		reponceService.create(dto);
+	}
+	@GetMapping("/{id}") // GET "/api/forum/1" ou 1 correspond à l'id d'un forum existant en bdd
+	public ForumDto getForum(@PathVariable("id") Long id) {
+		return forumService.get(id);
+	}
+	@GetMapping("/sujet/{id}") // GET "/api/forum/sujet/1" ou 1 correspond à l'id d'un sujet du forum existant en bdd
+	public SujetDto getSujet(@PathVariable("id") Long id) {
+		return sujetService.get(id);
+	}
+	
+	@GetMapping("/reponces") // GET "/api/forum/reponces" pas d'id, retourne toute la collection des réponces (posts)
+	public List<ReponcesDto> getAll() {
+		return reponceService.getAll();
+	}
+}

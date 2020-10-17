@@ -1,0 +1,9 @@
+package fr.formation.forum.dtos;
+
+public interface ForumViewDto {
+	
+
+    String getName();
+	
+
+}

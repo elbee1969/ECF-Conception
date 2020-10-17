@@ -1,0 +1,40 @@
+package fr.formation.forum.controllers;
+import javax.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ForumController {
+	
+	private final ForumService forumService;
+	
+	public ForumController(ForumService forumService) {
+		this.forumService = forumService;
+	}
+	
+	@PostMapping // POST "/api/forum" avec un JSON dans le corps de la requête
+	public void create(@RequestBody @Valid ForumCreateDto dto) {
+		forumService.create(dto);
+	}
+	@PostMapping("/sujet") // POST "/api/forum/sujet" avec un JSON dans le corps de la requête
+	public void create(@RequestBody @Valid SujetCreateDto dto) {
+		forumService.create(dto);
+	}
+	@PostMapping("/reponce") // POST "/api/forum/reponce" avec un JSON dans le corps de la requête
+	public void create(@RequestBody @Valid ReponseCreateDto dto) {
+		forumService.create(dto);
+	}
+	@GetMapping("/{id}") // GET "/api/forum/1" ou 1 correspond à l'id d'un forum existant en bdd
+	public ForumDto get(@PathVariable("id") Long id) {
+		return service.get(id);
+	}
+	
+	@GetMapping("/reponces") // GET "/api/forum/reponces" pas d'id, retourne toute la collection des réponces (posts)
+	public List<reponcesDto> getAll() {
+		return service.getAll();
+	}
+}
